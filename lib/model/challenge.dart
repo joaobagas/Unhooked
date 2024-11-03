@@ -1,7 +1,7 @@
 class Challenge {
-  Challenge(this.name, this.Description, this.type);
+  Challenge(this.name, this.description, this.type);
 
   String name;
-  String Description;
+  String description;
   int type;
 }
