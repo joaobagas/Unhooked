@@ -34,18 +34,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       // Display the selected page based on _currentIndex
       body: _pages[_currentIndex],
-
-      // Floating bottom navigation bar setup
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Action for the floating button (optional)
-        },
-        child: Icon(Icons.add),
-      ),
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        notchMargin: 8.0,
+        shape: const CircularNotchedRectangle(),
+        height:
+            100, // This might make cause troubles but fixes the overflow issue
         child: BottomNavigationBar(
           currentIndex: _currentIndex,
           onTap: _onTap,
