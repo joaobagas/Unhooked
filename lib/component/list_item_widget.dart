@@ -8,7 +8,7 @@ class ListItemWidget extends StatelessWidget {
   };
 
   // Constructor to receive title, checkbox state, and callback
-  ListItemWidget(this.title, this.isChecked);
+  ListItemWidget(this.title, this.isChecked, {super.key});
 
   @override
   Widget build(BuildContext context) {

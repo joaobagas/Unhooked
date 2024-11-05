@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:unhooked/component/list_item_widget.dart';
 
 class TaskPage extends StatefulWidget {
+  const TaskPage({super.key});
+
   @override
   State<StatefulWidget> createState() => _TaskPageState();
 }

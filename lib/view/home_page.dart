@@ -17,9 +17,9 @@ class _HomePageState extends State<HomePage> {
 
   // Define three pages in the nav bar
   final List<Widget> _pages = [
-    TaskPage(),
-    ChallengePage(),
-    GoalPage(),
+    const TaskPage(),
+    const ChallengePage(),
+    const GoalPage(),
   ];
 
   // Method to switch pages using nav bar
@@ -32,8 +32,41 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Display the selected page based on _currentIndex
       body: _pages[_currentIndex],
+      appBar: AppBar(
+        title: const Text("Unhooked"),
+        actions: [
+          PopupMenuButton<String>(
+            onSelected: (String value) {
+              // Handle selection here
+              if (value == 'Settings') {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const TaskPage()),
+                );
+              } else if (value == 'Profile') {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const TaskPage()),
+                );
+              }
+            },
+            itemBuilder: (BuildContext context) {
+              return [
+                const PopupMenuItem(
+                  value: 'Settings',
+                  child: Text('Settings'),
+                ),
+                const PopupMenuItem(
+                  value: 'Profile',
+                  child: Text('Profile'),
+                ),
+              ];
+            },
+            icon: const Icon(Icons.more_vert), // Icon for the dropdown menu
+          ),
+        ],
+      ),
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
         height:

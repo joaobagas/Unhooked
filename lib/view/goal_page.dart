@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class GoalPage extends StatefulWidget {
+  const GoalPage({super.key});
+
   @override
   State<StatefulWidget> createState() => _GoalPageState();
 }
