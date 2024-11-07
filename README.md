@@ -11,9 +11,12 @@ This is a way the app might work:
 3. Variable Reward - This can be done by getting the user to go get quick challenges that push the user to do his goals.
 4. Investment - This will be achieved by having a streak and maybe getting a social aspect to it.
 
+The login and storing of the information will be stored using Firebase.
+
 ## Objectives
 
 These will be added later.
+- [x] Implement main UI
 - [ ] Implement login through Firebase
 - [ ] Implement saving stuff through Firebase
 - [ ] Implement objectives
