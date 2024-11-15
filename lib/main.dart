@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:unhooked/view/home_page.dart';
+import 'package:unhooked/view/auth_gate_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
         useMaterial3: true,
       ),
-      home: const HomePage(title: 'Unhooked'),
+      home: const AuthGatePage(),
     );
   }
 }
